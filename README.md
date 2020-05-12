@@ -1,6 +1,7 @@
 # avalanche
 
 Bak-Tang-Wiesenfeld Sandpile Model
+
 Language: Portuguese
 
 The code on this folder aim to model the sandpile avalanche model as presented by Bak, Tang and Wiesenfeld (1988). The user is
