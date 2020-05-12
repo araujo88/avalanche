@@ -25,7 +25,7 @@ int main(void)
 	
 	printf("\n\nUniversidade Federal do Rio Grande do Sul - Escola de Engenharia");
 	printf("\nTrabalho final elaborado para a disciplina ENG03049 - Linguagem C para Engenharia - Prof. Bardo E. J. Bodmann");
-	printf("\nAlgoritmo para avalanches de graos de areia baseado no modelo de Bak, Tang e Wiesenfeld - desenvolvido por Leonardo Antonio de Araujo\n");
+	printf("\nAlgoritmo para avalanches de graos de areia baseado no modelo de Bak, Tang e Wiesenfeld - desenvolvido por Leonardo Antonio de Araujo - Versao 3\n");
 
 	printf("\nDigite o tamanho da matriz:");
 	scanf("%d", &p.tamanho);
