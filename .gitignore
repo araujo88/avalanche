@@ -1,0 +1,4 @@
+output/*.vtk
+avalanche
+obj
+old_version
