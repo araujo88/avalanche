@@ -35,4 +35,4 @@ For visualization of the program output, run the following command:
 
 `paraview output/`
 
-In Paraview, choose "open files" and then selected the generated .vtk files.
+In Paraview, choose "open files" and then select the generated .vtk files.
