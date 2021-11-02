@@ -8,8 +8,8 @@ typedef struct Parameters
     int interval;     // matrix printing interval
 } pr;
 
-void FillMatrix(int t, int **v); // fills matrix with grains
-void CheckAvalanche(int t, int **v); // checks for avalanche
+void FillMatrix(int t, int **v);              // fills matrix with grains
+void CheckAvalanche(int t, int **v);          // checks for avalanche
 void MainLoop(int **v, int t, int e, int it); // main program loop
 
 #endif // AVALANCHE_H_INCLUDED
