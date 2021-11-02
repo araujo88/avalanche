@@ -34,3 +34,5 @@ This command will run the program with matrix size of 50, 5000 total number of g
 For visualization of the program output, run the following command:
 
 `paraview output/`
+
+In Paraview, choose "open files" and then selected the generated .vtk files.
