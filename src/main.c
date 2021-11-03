@@ -26,22 +26,37 @@ int main(int argc, char *argv[])
 		printf("\nError - matrix printing interval not provided. Aborting program ...\n");
 		exit(1);
 	}
-
-	printf("\nargv1: %s", argv[1]);
-	printf("\nargv2: %s", argv[2]);
-	printf("\nargv3: %s", argv[3]);
+	if (argv[4] == NULL)
+	{
+		printf("\nError - type of simulation not provided. Aborting program ...\n");
+		exit(1);
+	}
 
 	p.size = atoi(argv[1]);			// size of matrix
 	p.total_grains = atoi(argv[2]); // total number of grains
 	p.interval = atoi(argv[3]);		// matrix printing interval
+	p.type = atoi(argv[4]);			// matrix printing interval
 
 	printf("\nSize of matrix: %d", p.size);
 	printf("\nTotal number of grains: %d", p.total_grains);
 	printf("\nMatrix printing interval: %d", p.interval);
+	if (p.type == 0)
+	{
+		printf("\nType of simulation: center");
+	}
+	else if (p.type == 1)
+	{
+		printf("\nType of simulation: random");
+	}
+	else
+	{
+		printf("\nError - invalid method");
+		exit(1);
+	}
 
 	m = AllocateIntMatrix(p.size);
 	ZeroMatrix(p.size, m);
-	MainLoop(m, p.size, p.total_grains, p.interval);
+	MainLoop(m, p.size, p.total_grains, p.interval, p.type);
 
 	m = FreeIntMatrix(p.size, m);
 	return 0;

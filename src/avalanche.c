@@ -4,9 +4,9 @@
 #include "matrix.h"
 #include "utils.h"
 
-void FillMatrix(int t, int **v)
+void FillMatrix(int t, int **v, int type)
 {
-    int i, j, x, y;
+    int x, y;
 
     if (v == NULL)
     {
@@ -19,8 +19,21 @@ void FillMatrix(int t, int **v)
         exit(1);
     }
 
-    x = t / 2;
-    y = t / 2;
+    if (type == 0)
+    {
+        x = t / 2;
+        y = t / 2;
+    }
+    else if (type == 1)
+    {
+        x = RandomInteger(0, t - 1);
+        y = RandomInteger(0, t - 1);
+    }
+    else
+    {
+        printf("\nInvalid type of simulation. Aborting program....");
+        exit(1);
+    }
 
     v[x][y] += 1;
 }
@@ -62,9 +75,9 @@ void CheckAvalanche(int t, int **v)
     }
 }
 
-void MainLoop(int **v, int t, int e, int it)
+void MainLoop(int **v, int t, int e, int it, int type)
 {
-    int i, n, a, b;
+    int i, n;
 
     n = it;
 
@@ -82,7 +95,7 @@ void MainLoop(int **v, int t, int e, int it)
 
     for (i = 1; i <= e; i++)
     {
-        FillMatrix(t, v);
+        FillMatrix(t, v, type);
         CheckAvalanche(t, v);
         if (i == it)
         {

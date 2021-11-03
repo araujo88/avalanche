@@ -117,12 +117,12 @@ void PrintMatrix(int t, int **v)
             if ((j == 0))
             {
                 sprintf(c, "%d", v[i][j]);
-                fprintf(pf, c);
+                fprintf(pf, "%s", c);
             }
             else
             {
                 sprintf(c, " %d", v[i][j]);
-                fprintf(pf, c);
+                fprintf(pf, "%s", c);
             }
         }
     }

@@ -23,11 +23,15 @@ Compilation:
 
 `make all`
 
-To run the program, 3 arguments are needed: matrix size, total number of grains and grain printing interval. Example:
+To run the program, 4 arguments are needed: matrix size, total number of grains, grain printing interval and type of simulation (0 for grain at center point or 1 for grain at random point). Example:
 
-`./avalanche 50 5000 5`
+`./avalanche 50 5000 5 0`
 
-This command will run the program with matrix size of 50, 5000 total number of grains and the .vtk file will be printed every 5 grain interval.
+This command will run the program with matrix size of 50, 5000 total number of grains (5000 iterations), matrix output every 5 grain interval and grain always placed at the center point at each iteration. A video with this example can be found on the `/examples` folder.
+
+`./avalanche 50 10000 5 1`
+
+This command will run the program with matrix size of 50, 5000 total number of grains (5000 iterations), matrix output every 5 grain interval and grain always placed at a random point at each iteration. A video with this example can be found on the `/examples` folder.
 
 ## Data visualization
 
