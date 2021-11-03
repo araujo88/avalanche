@@ -23,15 +23,29 @@ Compilation:
 
 `make all`
 
-To run the program, 4 arguments are needed: matrix size, total number of grains, grain printing interval and type of simulation (0 for grain at center point or 1 for grain at random point). Example:
+To run the program, 4 arguments are needed: matrix size, total number of grains, grain printing interval and type of simulation (0 for grain at center point or 1 for grain at random point).
+
+## Examples
+
+### Grain at center point
 
 `./avalanche 50 5000 5 0`
 
 This command will run the program with matrix size of 50, 5000 total number of grains (5000 iterations), matrix output every 5 grain interval and grain always placed at the center point at each iteration. A video with this example can be found on the `/examples` folder.
 
+![Alt text](examples/50_5000_5_0.png?raw=true)
+
+_Video snapshot at the end of the simulation_
+
+### Grain at random point
+
 `./avalanche 50 10000 5 1`
 
 This command will run the program with matrix size of 50, 5000 total number of grains (5000 iterations), matrix output every 5 grain interval and grain always placed at a random point at each iteration. A video with this example can be found on the `/examples` folder.
+
+![Alt text](examples/50_10000_5_1.png?raw=true)
+
+_Video snapshot at the end of the simulation_
 
 ## Data visualization
 
