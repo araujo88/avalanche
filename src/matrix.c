@@ -8,13 +8,13 @@ int **AllocateIntMatrix(int t)
     int i;
     if (t < 1)
     {
-        printf("** Error: invalid parameter **\n");
+        printf("\n** Error: invalid parameter **\n");
         return (NULL);
     }
     v = (int **)calloc(t, sizeof(int *));
     if (v == NULL)
     {
-        printf("** Error: insufficient memory **");
+        printf("\n** Error: insufficient memory **\n");
         return (NULL);
     }
     for (i = 0; i < t; i++)
@@ -22,7 +22,7 @@ int **AllocateIntMatrix(int t)
         v[i] = (int *)calloc(t, sizeof(int));
         if (v[i] == NULL)
         {
-            printf("** Error: insufficient memory **");
+            printf("\n** Error: insufficient memory **\n");
             return (NULL);
         }
     }
@@ -36,7 +36,7 @@ int **FreeIntMatrix(int t, int **v)
         return (NULL);
     if (t < 1)
     {
-        printf("** Error: invalid parameter **\n");
+        printf("\n** Error: invalid parameter **\n");
         return (v);
     }
     for (i = 0; i < t; i++)
@@ -51,12 +51,12 @@ void ZeroMatrix(int t, int **v)
 
     if (v == NULL)
     {
-        printf("** Erro: Abortando o programa **\n");
+        printf("\n** Error: aborting program **\n");
         exit(1);
     }
-    if (t < 1) /* verifica parametros recebidos */
+    if (t < 1)
     {
-        printf("** Erro: Parametro invalido **\n");
+        printf("\n** Error: invalid parameter **\n");
         exit(1);
     }
 
@@ -78,12 +78,12 @@ void PrintMatrix(int t, int **v)
 
     if (v == NULL)
     {
-        printf("** Error: Aborting program **\n");
+        printf("\n** Error: Aborting program **\n");
         exit(1);
     }
     if (t < 1)
     {
-        printf("** Error: Invalid parameter **\n");
+        printf("\n** Error: Invalid parameter **\n");
         exit(1);
     }
 

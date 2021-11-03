@@ -13,22 +13,22 @@ int main(int argc, char *argv[])
 
 	if (argv[1] == NULL)
 	{
-		printf("\nError - size of matrix not provided. Aborting program ...\n");
+		printf("\n** Error - size of matrix not provided **\n");
 		exit(1);
 	}
 	if (argv[2] == NULL)
 	{
-		printf("\nError - total number of grains not provided. Aborting program ...\n");
+		printf("\n** Error - total number of grains not provided **\n");
 		exit(1);
 	}
 	if (argv[3] == NULL)
 	{
-		printf("\nError - matrix printing interval not provided. Aborting program ...\n");
+		printf("\n** Error - matrix printing interval not provided **\n");
 		exit(1);
 	}
 	if (argv[4] == NULL)
 	{
-		printf("\nError - type of simulation not provided. Aborting program ...\n");
+		printf("\n** Error - type of simulation not provided **\n");
 		exit(1);
 	}
 
@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
 	printf("\nSize of matrix: %d", p.size);
 	printf("\nTotal number of grains: %d", p.total_grains);
 	printf("\nMatrix printing interval: %d", p.interval);
+
 	if (p.type == 0)
 	{
 		printf("\nType of simulation: center");
@@ -50,7 +51,10 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("\nError - invalid method");
+		printf("\n** Error - invalid type argument **");
+		printf("\nValid arguments are:");
+		printf("\n0 - grain at center point");
+		printf("\n1 - grain at random point\n");
 		exit(1);
 	}
 
